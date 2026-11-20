@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>German Learner — Netzwerk neu A1 & A2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">DE</span><span>German Learner <small>✦ PRO</small></span></a>
+  <div class="top-actions"><span id="streak">🔥 0</span><button id="themeBtn" class="icon-btn" aria-label="থিম পরিবর্তন">☾</button></div>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">NETZWERK NEU • A1 & A2 COMPLETE</p>
+    <h1>জার্মান শিখুন, <em>প্রতিদিন একটু একটু করে।</em></h1>
+    <p>শব্দভান্ডার, উচ্চারণ, ফ্ল্যাশকার্ড ও কুইজ—এক জায়গায়।</p>
+    <label class="search"><span>⌕</span><input id="searchInput" placeholder="জার্মান শব্দ, বাংলা অর্থ বা সিরিয়াল সার্চ করুন..."></label>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><div><span class="eyebrow">YOUR LEARNING PATH</span><h2>কোর্স লেভেল নির্বাচন করুন</h2></div><span class="current-pill">বর্তমান: <b id="currentLevel">A1</b></span></div>
+    <div class="level-grid">
+      <button class="level-card active" data-level="A1"><span class="level-icon">🌱</span><span class="level-name">Beginner</span><strong>Netzwerk A1</strong><span class="level-meta" id="a1Meta">০টি শব্দ • 0% সম্পন্ন</span><span class="progress"><i id="a1Bar"></i></span><span class="chapter-link">Kapitel 1–12 <b>›</b></span></button>
+      <button class="level-card" data-level="A2"><span class="level-icon">🚀</span><span class="level-name">Elementary</span><strong>Netzwerk A2</strong><span class="level-meta" id="a2Meta">০টি শব্দ • 0% সম্পন্ন</span><span class="progress"><i id="a2Bar"></i></span><span class="chapter-link">Kapitel 1–12 <b>›</b></span></button>
+    </div>
+  </section>
+
+  <section class="section learning-layout">
+    <div class="main-column">
+      <div class="section-heading"><div><span class="eyebrow">STUDY OVERVIEW</span><h2 id="courseTitle">Netzwerk neu A1 অগ্রগতি</h2></div><span id="progressText" class="muted">0 / 0 (0%)</span></div>
+      <div class="progress-panel"><div class="progress large"><i id="courseBar"></i></div><div class="chapter-row"><b>অধ্যায় (Kapitel)</b><span id="chapterCount">০টি শব্দ</span></div>
+        <div class="chapter-grid" id="chapterGrid"></div>
+      </div>
+
+      <div class="section-heading spaced"><div><span class="eyebrow">PRACTICE MODE</span><h2>মডেল ভোকাবুলারি টেস্ট</h2></div><span class="score" id="score">স্কোর 0</span></div>
+      <div class="quiz-panel">
+        <div class="quiz-tabs"><button class="quiz-tab active" data-mode="meaning">বাংলা অর্থ কুইজ</button><button class="quiz-tab" data-mode="article">Artikel (der/die/das)</button></div>
+        <div class="quiz-card"><span class="eyebrow" id="quizCounter">KAPITEL 1 • #1</span><h3 id="quizWord">শব্দ যোগ করুন</h3><p id="quizHint">আপনার শব্দতালিকা যোগ করলে এখানে কুইজ শুরু হবে।</p><div id="quizOptions" class="options"></div><p id="quizFeedback" class="feedback" aria-live="polite"></p><button class="primary-btn" id="nextQuiz">পরবর্তী প্রশ্ন →</button></div>
+      </div>
+
+      <div class="section-heading spaced"><div><span class="eyebrow">FLASHCARDS</span><h2>শব্দ মনে রাখুন</h2></div><span class="muted" id="cardPosition">কার্ড 0 / 0</span></div>
+      <div class="flashcard" id="flashcard">
+        <div class="flash-top"><span id="flashChapter">#1 Kap 1</span><span id="flashLevel">Netzwerk A1</span></div>
+        <div class="flash-content" id="flashContent"><span class="eyebrow">DEUTSCH</span><h2>শব্দ যোগ করুন</h2><p>আপনার শব্দতালিকা যুক্ত হলে কার্ড দেখা যাবে।</p></div>
+        <div class="flash-actions"><button id="prevCard" class="secondary-btn">← পূর্ববর্তী</button><button id="learnBtn" class="primary-btn">✓ শেখা হয়েছে</button><button id="nextCard" class="secondary-btn">পরবর্তী →</button></div>
+        <button class="sound-btn" id="speakBtn">🔊 উচ্চারণ শুনুন</button>
+      </div>
+    </div>
+
+    <aside class="side-column">
+      <div class="stats-card"><span class="eyebrow">YOUR STATISTICS</span><h3>সামগ্রিক শেখার পরিসংখ্যান</h3><div class="stat"><b id="totalLearned">0</b><span>মোট শেখা শব্দ</span></div><div class="stat"><b id="totalFlagged">0</b><span>ফ্ল্যাগড শব্দ</span></div><div class="stat"><b id="totalPoints">0</b><span>কুইজ পয়েন্ট</span></div></div>
+      <div class="settings-card"><span class="eyebrow">PERSONAL SPACE</span><h3>প্রোফাইল ও সেটিংস</h3><label class="profile-label">প্রোফাইল নাম<input id="profileName" placeholder="আপনার নাম লিখুন"></label><button class="setting-btn" id="saveName">👤 <span><b>প্রোফাইল নাম পরিবর্তন</b><small>আপনার নাম সেট করুন</small></span>›</button><button class="setting-btn" id="exportBtn">💾 <span><b>প্রোগ্রেস ব্যাকআপ (Export)</b><small>শেখা শব্দ ও বুকমার্ক সেভ রাখুন</small></span>›</button><button class="setting-btn" id="resetBtn">↻ <span><b>বর্তমান লেভেল রিসেট</b><small>শুধুমাত্র সিলেক্ট করা কোর্স রিসেট হবে</small></span>›</button></div>
+      <div class="note-card"><b>শুরু করার নিয়ম</b><p>নিজের শব্দতালিকা যোগ করতে <code>words.js</code> ফাইলে শব্দগুলো লিখুন। প্রতিটি শব্দে জার্মান, বাংলা অর্থ, উচ্চারণ ও Artikel দিন।</p></div>
+    </aside>
+  </section>
+</main>
+<footer>German Learner <span>শেখা হোক আনন্দের</span></footer>
+<nav class="bottom-nav"><a href="#top">⌂ <span>হোম</span></a><a href="#quizWord">▤ <span>এক্সাম</span></a><a href="#progressText">▥ <span>প্রোগ্রেস</span></a><a href="#flashcard">⟳ <span>রিভিশন</span></a><a href="#profileName">⚙ <span>আরও</span></a></nav>
+<script src="words.js"></script><script src="app.js"></script>
+</body>
+</html>
